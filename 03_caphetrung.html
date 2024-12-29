@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết cà phê trứng</title>
+    <link rel="icon" href="assets/img/HCMUE 2.png" type="image/x-icon" />
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/page.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/chitiet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="01_Page HCMUEAT.html">
+          <img
+            src="assets/img/HCMUEAT 3.png"
+            alt="HCMUE Logo"
+            style="width: 160px; height: 56px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="01_Page HCMUEAT.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="01_Giohang.html">Giỏ Hàng</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="01_login.html" onclick="logOut()"
+                >Đăng xuất</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item" style="cursor: pointer">
+              <a class="nav-link" onclick="showcart()" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container mt-4">
+        <div class="product-header d-flex flex-wrap">
+          <img
+            src="assets/img/pic6.jpg"
+            alt="Cà Phê Sữa"
+            class="img-fluid col-12 col-md-6"
+          />
+          <div class="product-info col-12 col-md-6">
+            <h1>Cà Phê Trứng</h1>
+            <div class="price">35.000đ</div>
+            <p>Cà Phê Trứng</p>
+            <div class="add-to-cart mt-3">
+              <a href="01_Giohang.html" class="btn btn-primary add-to-cart" style="background-color: green;">Thanh toán ngay</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="product-description mt-5">
+          <h2>Mô tả</h2>
+          <p>
+            Cà phê trứng là một loại thức uống có nguồn gốc từ Việt Nam được làm từ cà phê (cà phê vối) với trứng gà (có nhỏ thêm mật ong) và sữa đặc có đường. "Cà phê Giảng" là quán cà phê lâu đời và nổi tiếng nhất Hà thành phục vụ thức uống này. Theo lời người
+                chủ hiện tại của quán thì cà phê trứng ra đời vào những năm cuối thập niên 1940 tại Hà Nội, xuất phát từ việc khan hiếm mặt hàng sữa tươi thời điểm bấy giờ nên cha ông, người chủ đầu tiên của quán đã dùng lòng đỏ trứng gà như một giải
+                pháp thay thế, sau này, đây là đặc sản của Hà Nội.
+          </p>
+          <p>
+            Cà phê trứng có màu hơi vàng đựng trong một tách nhỏ. Để giữ cho đồ uống luôn nóng, người phục vụ sẽ đặt ly cà phê vào một bát nước ấm. Sau khi được rót qua lớp bọt kem đánh bông lên từ trứng, vị cà phê đặc đọng lại ở đáy cốc có phần đậm đà hơn. Trước
+                đây chỉ đánh trứng bằng tay, do đó mất nhiều thời gian và độ bông của trứng không thể bằng sử dụng máy do đó chỉ có cà phê trứng nóng.
+          </p>
+          <hr />
+        </div>
+  
+        <div class="reviews mt-5">
+          <h2>Đánh giá</h2>
+          <div class="review-list">
+            <div class="review-item d-flex flex-wrap border-bottom pb-3 mb-3">
+              <div class="review-content col-10">
+                <h5>Nguyễn Văn A</h5>
+                <div class="rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                </div>
+                <p>Đồ uống rất ngon, chuẩn vị! Chắc chắn sẽ quay lại.</p>
+              </div>
+            </div>
+  
+            <div class="review-item d-flex flex-wrap border-bottom pb-3 mb-3">
+              <div class="review-content col-10">
+                <h5>Trần Thị B</h5>
+                <div class="rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+                <p>Phục vụ chu đáo, món ăn chất lượng!</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="add-review mt-4">
+            <h3>Thêm đánh giá</h3>
+            <form>
+              <div class="form-group">
+                <label for="review-name">Tên của bạn</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="review-name"
+                  placeholder="Nhập tên của bạn"
+                />
+              </div>
+              <div class="form-group">
+                <label for="review-content">Đánh giá</label>
+                <textarea
+                  class="form-control"
+                  id="review-content"
+                  rows="3"
+                  placeholder="Chia sẻ ý kiến của bạn"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Gửi đánh giá</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>

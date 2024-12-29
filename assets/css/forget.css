@@ -1,0 +1,127 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(120deg, #87ceeb, white);
+}
+
+.forgetimg {
+  float: left;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px 25px 25px 25px;
+}
+
+.header {
+  font-size: 70px;
+  text-align: center;
+  font-family: fantasy;
+  margin-right: 100px;
+}
+
+.forget-container {
+  margin: auto;
+  width: 600px;
+  height: auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.forget-container h2 {
+  margin-bottom: 20px;
+}
+
+.forget-container .form-group {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.forget-container input[type="text"],
+.forget-container input[type="password"],
+.forget-container input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.forget-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6a11cb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.forget-container button:hover {
+  background-color: #2575fc;
+}
+
+.forget-container .footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.forget-container .footer a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.forget-container .footer a:hover {
+  text-decoration: underline;
+}
+
+.underline {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .forget-container {
+      padding: 15px;
+      width: 90%;
+      max-width: 90%;
+  }
+  .forget-form input {
+      font-size: 14px;
+  }
+  button {
+      font-size: 14px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .forget-container {
+      padding: 25px;
+      width: 80%;
+  }
+  .forget-form input {
+      font-size: 16px;
+  }
+  button {
+      font-size: 16px;
+  }
+}
+@media (min-width: 1025px) {
+  .forget-container {
+      width: 40%;
+      padding: 30px;
+  }
+  .forget-form input {
+      font-size: 18px;
+  }
+  button {
+      font-size: 18px;
+  }
+}

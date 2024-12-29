@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/boottrap/bootstrap.min.css" />
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body class="body">
+    <header>
+      <div>
+        <img class="logoimg" src="assets/img/HCMUE 2.png" alt="HCMUEat" />
+        <p class="logotext">HCMUEat</p>
+      </div>
+    </header>
+    <div class="login-container">
+      <h2>Đăng Nhập</h2>
+      <form class="login-form" onsubmit="return validateLogin(event)">
+        <div class="form-group">
+          <label for="username">Tên Đăng Nhập</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Nhập tên vào"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Mật Khẩu</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Nhập mật khẩu vào"
+            required
+          />
+        </div>
+        <button type="submit">Đăng Nhập</button>
+        <div class="footer">
+          <p>
+            <a href="01_forget.html">Quên mật khẩu</a>||
+            <a href="01_signup.html">Đăng Ký</a>
+          </p>
+        </div>
+      </form>
+      <p class="error-message" id="error-message">
+        Invalid username or password
+      </p>
+    </div>
+  </body>
+</html>

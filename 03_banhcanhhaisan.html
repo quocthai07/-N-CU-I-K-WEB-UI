@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Bánh canh hải sản</title>
+    <link rel="icon" href="assets/img/HCMUE 2.png" type="image/x-icon" />
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/page.js" defer></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/chitiet.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="01_Page HCMUEAT.html">
+        <img
+          src="assets/img/HCMUEAT 3.png"
+          alt="HCMUE Logo"
+          style="width: 160px; height: 56px"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="01_Page HCMUEAT.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="01_Giohang.html">Giỏ Hàng</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="01_login.html" onclick="logOut()"
+              >Đăng xuất</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Liên hệ</a>
+          </li>
+          <li class="nav-item" style="cursor: pointer">
+            <a class="nav-link" onclick="showcart()" id="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="product-header d-flex flex-wrap">
+        <img
+          src="assets/img/pic7.jpg"
+          alt="Bánh Canh Hải Sản"
+          class="img-fluid col-12 col-md-6"
+        />
+        <div class="product-info col-12 col-md-6">
+          <h1>Bánh Canh Hải Sản</h1>
+          <div class="price">60.000đ</div>
+          <p>Bánh Canh Hải Sản</p>
+          <div class="add-to-cart mt-3">
+            <a href="01_Giohang.html" class="btn btn-primary add-to-cart" style="background-color: green;">Thanh toán ngay</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-description mt-5">
+        <h2>Mô tả</h2>
+        <p>
+          Bánh canh là một món ăn dân dã, gần gũi với người Việt Nam. Thông
+          thường, bánh canh được làm chủ yếu bằng bột mì, bột gạo, bột sắn. Ở
+          một số nơi, sợi bánh canh là sự kết hợp hài hòa giữa bột gạo và bột
+          sắn. Để có thể chế biến bánh canh, các bạn cần phải thả bánh canh vào
+          nồi nước dùng và đợi cho tới khi bánh chín tới mới vớt ra.
+        </p>
+        <p>
+          Ở Việt Nam có 4 loại bánh canh phổ biến nhất, là: Bánh canh bột gạo,
+          bánh canh bột lọc, bánh canh bột xắt và bánh canh bột mì.
+        </p>
+        <hr />
+      </div>
+
+      <div class="reviews mt-5">
+        <h2>Đánh giá</h2>
+        <div class="review-list">
+          <div class="review-item d-flex flex-wrap border-bottom pb-3 mb-3">
+            <div class="review-content col-10">
+              <h5>Nguyễn Văn A</h5>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
+              </div>
+              <p>Đồ ăn rất ngon, chuẩn vị! Chắc chắn sẽ quay lại.</p>
+            </div>
+          </div>
+
+          <div class="review-item d-flex flex-wrap border-bottom pb-3 mb-3">
+            <div class="review-content col-10">
+              <h5>Trần Thị B</h5>
+              <div class="rating">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+              </div>
+              <p>Phục vụ chu đáo, món ăn chất lượng!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-review mt-4">
+          <h3>Thêm đánh giá</h3>
+          <form>
+            <div class="form-group">
+              <label for="review-name">Tên của bạn</label>
+              <input
+                type="text"
+                class="form-control"
+                id="review-name"
+                placeholder="Nhập tên của bạn"
+              />
+            </div>
+            <div class="form-group">
+              <label for="review-content">Đánh giá</label>
+              <textarea
+                class="form-control"
+                id="review-content"
+                rows="3"
+                placeholder="Chia sẻ ý kiến của bạn"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Gửi đánh giá</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

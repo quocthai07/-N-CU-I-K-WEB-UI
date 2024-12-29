@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard admin</title>
+    <link rel="icon" href="assets/img/HCMUE 2.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+    
+
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="assets/img/hinh1.jpg" style="border-radius: 50%; height: 100px; width: 120px; padding: 5px;">
+                </div>
+                <div class="close">
+                    <span class="material-icons" id="close_btn">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" style="padding-top: 10px ;" class="active">
+                    <span class="material-icons">menu</span> 
+                    <h3>Bảng điều khiển</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">person</span>
+                    <h3>Khách hàng</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">insert_chart</span>
+                    <h3>Phân tích</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">mark_unread_chat_alt</span>
+                    <h3>Cập nhật gần đây<span class="msg_count">999+</span></h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">restaurant</span>
+                    <h3>Các sản phẩm</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons">settings</span>
+                    <h3>Cài đặt</h3>
+                </a>
+                <a href="#" id="add_products">
+                    <span class="material-icons" >add_circle</span>
+                    <h3>Thêm sản phẩm</h3>
+                </a>
+                <a style="cursor: pointer;" onclick="logOut()">
+                    <span class="material-icons">exit_to_app</span>
+                    <h3>Đăng xuất</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Bảng điều khiển</h1>
+                <div class="date">
+                    <input type="date">
+                </div>
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons">trending_up</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Tổng doanh thu</h3>
+                            <h1>₫115.234.565</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                100%
+                            </div>
+                        </div>
+                    </div>
+                    <small>24h qua</small>
+                </div>
+
+                <div class="expenses">
+                    <span class="material-icons">local_mall</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Chi phí</h3>
+                            <h1>₫35.234.565</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                30%
+                            </div>
+                        </div>
+                    </div>
+                    <small>24h qua</small>
+                </div>
+
+                <div class="income">
+                    <span class="material-icons">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Thu nhập</h3>
+                            <h1>₫80.000.000</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="30" cy="40" cx="40"></circle>
+                            </svg>
+                            <div class="number">
+                                70%
+                            </div>
+                        </div>
+                    </div>
+                    <small>24h qua</small>
+                </div>
+            </div>
+
+            <div class="recent_order">
+                <h1>Đơn đặt hàng gần đây</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã vận đơn</th>
+                            <th>Tên khách hàng</th>
+                            <th>Các món đã đặt</th>
+                            <th>Ghi chú của khách hàng</th>
+                            <th>Thành tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Hoạt động</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bill">5001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Cà phê sữa + Bánh canh hải sản</td>
+                            <td>Cà phê sữa không bỏ cà phê</td>
+                            <td>100.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5002</td>
+                            <td>Trần Thị Cẩm B</td>
+                            <td>Cà phê trứng + Phở chay</td>
+                            <td>Shop nhớ cho em 1 trái ớt</td>                            
+                            <td>105.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5003</td>
+                            <td>Lê Thị C</td>
+                            <td>Chả chiên thập cẩm + Tré trộn</td>
+                            <td>Không cay</td>
+                            <td>130.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5004</td>
+                            <td>Trần Thị D</td>
+                            <td>Trứng lòng đào + Súp cua</td>
+                            <td>Đừng bỏ tiêu</td>
+                            <td>107.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5005</td>
+                            <td>Đoàn Văn E</td>
+                            <td>Chè trôi nước + Mì quảng chay</td>
+                            <td></td>
+                            <td>95.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5006</td>
+                            <td>Nguyễn Thị F</td>
+                            <td>Sữa chua nếp cẩm</td>
+                            <td></td>
+                            <td>55.000đ</td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5007</td>
+                            <td>Lê Văn G</td>
+                            <td>Bánh canh hải sản</td>
+                            <td>Đừng lấy tôm</td>
+                            <td>90.000đ </td>
+                            <td>
+                                <select class="status-select" onchange="changeStatus(this)">
+                                    <option class="processing" value="Đang xử lý">Đang xử lý</option>
+                                    <option class="shipping" value="Đang giao">Đang giao</option>
+                                    <option class="delivered" value="Đã giao">Đã giao</option>
+                                    <option class="cancelled" value="Đã hủy">Đã hủy</option>
+                                  </select>
+                            </td>
+                            <td>
+                                <button onclick="updateOrderStatus(this)">Cập nhật</button>
+                            </td>
+                        </tr>                                                
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="recent_order">
+                <h1>Quản lý sản phẩm</h1>
+                <h2>Sản phẩm đang bán </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã sản phẩm</th>
+                            <th>Ảnh minh họa</th>
+                            <th>Tên món ăn</th>
+                            <th>Đánh giá của khách hàng</th>
+                            <th>Đơn giá</th>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td><img src="assets/img/pic8.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>CÀ PHÊ SỮA</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>20.000đ/LY</td> 
+                        </tr>
+
+                        <tr>
+                            <td>1002</td>
+                            <td><img src="assets/img/pic7.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>BÁNH CANH HẢI SẢN</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>60.000đ/TÔ</td>
+                        </tr>
+
+                        <tr>
+                            <td>1003</td>
+                            <td><img src="assets/img/pic6.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>CÀ PHÊ TRỨNG</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>35.000đ/LY</td>
+                        </tr>
+                        <tr>
+                            <td>1004</td>
+                            <td><img src="assets/img/pic5.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>PHỞ CHAY</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>50.000đ/TÔ</td>
+                        </tr>
+
+                        <tr>
+                            <td>1005</td>
+                            <td><img src="assets/img/pic4.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>CHẢ CHIÊN THẬP CẨM</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>40.000đ/PHẦN</td>
+                        </tr>
+
+                        <tr>
+                            <td>1006</td>
+                            <td><img src="assets/img/pic3.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>MÌ QUẢNG CHAY</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>50.000đ/TÔ</td>
+                        </tr>
+
+                        <tr>
+                            <td>1007</td>
+                            <td><img src="assets/img/pic2.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>TRÉ TRỘN</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>50.000đ/PHẦN</td>
+                        </tr>
+                        <tr>
+                            <td>1008</td>
+                            <td><img src="assets/img/pic1.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>SỮA CHUA NẾP CẨM</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>25.000đ/LY</td>
+                        </tr>   
+                        <tr>
+                            <td>1009</td>
+                            <td><img src="assets/img/pic9.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>TRỨNG LÒNG ĐÀO</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>7.000đ/QUẢ</td> 
+                        </tr>   
+                        <tr>
+                            <td>1010</td>
+                            <td><img src="assets/img/pic10.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>CHÈ TRÔI NƯỚC</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>15.000đ/CHÉN</td>
+                        </tr>   
+                        <tr>
+                            <td>1011</td>
+                            <td><img src="assets/img/pic11.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>CHÂN GÀ SỐT THÁI</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>70.000đ/PHẦN</td>
+                        </tr>   
+                        <tr>
+                            <td>1012</td>
+                            <td><img src="assets/img/pic12.jpg" style="height: 120px; width: 170px; padding:7px"></td>
+                            <td>SÚP CUA</td>
+                            <td>
+                                5.0/5<svg style="color: yellow;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                  </svg>
+                            </td>
+                            <td>70.000đ/TÔ</td>
+                        </tr>                                       
+                    </tbody>
+                </table>
+            </div> 
+
+            <h2>Sản phẩm mới thêm </h2>
+            <div class="item add_products" id="add_products">
+                <div>
+                    <span class="material-icons">add_circle</span>
+                </div>
+            </div>
+            
+            <div class="recent_add" id="recent_add">
+                <div>
+                    <label>Mã sản phẩm</label>
+                    <input type="number" id="id">
+                </div>
+
+                <div>
+                    <label>Tên món ăn  </label>
+                    <input type="text" id="name">
+                </div>
+
+                <div>
+                    <label>Chi tiết</label>
+                    <input type="text" id="chitiet">
+                </div>
+
+                <div>
+                    <label>Đơn giá </label>
+                    <input type="text" id="gia">
+                </div>
+            
+                <div>
+                    <button onclick="add()">Thêm</button>
+                </div>
+            </div>
+
+            <div class="recent_order">
+                <h2>Sản phẩm đã thêm</h2>
+                <table id="render" class="table">
+                    <thead>
+                        <tr>
+                            <th>Mã sản phẩm</th> 
+                            <th>Tên món ăn</th>
+                            <th>Chi tiết</th>
+                            <th>Đơn giá</th> 
+                            <th>Chỉnh sửa</th>                         
+                        </tr>
+                    </thead>
+                </table>
+
+        </main>
+
+        
+
+        <div class="right">
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p><b class="ad" style="color: rgb(211, 3, 3)">Group 10</b></p>
+                        <p>Admin</p>
+                        <small class="text-mulled"></small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="assets/img/hinh2.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent_updates">
+                <h2>Cập nhật gần đây</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Nguyễn Văn A</b> đã nhận được đơn hàng của anh ấy</p>
+                        </div>
+                    </div>
+    
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Trần Thị Cẩm B</b> đã nhận được đơn hàng của cô ấy</p>
+                        </div>
+                    </div>
+    
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Lê Thị C</b> đã nhận được đơn hàng của cô ấy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="recent_updates">
+                <h2>Góp ý của khách hàng</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Nguyễn Văn A:</b> Đồ ăn rất ngon, lần sau nhất định sẽ ủng hộ tiếp.</p>
+                        </div>
+                    </div>
+    
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Trần Thị Cẩm B:</b> 10 điểm không có nhưng.</p>
+                        </div>
+                    </div>
+    
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="assets/img/hinh3.jpg">                  
+                        </div>
+                        <div class="message">
+                            <p><b>Lê Thị C:</b> Trên cả tuyệt vời.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+
+        
+    </div>
+
+    <br>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h5>Về chúng tôi</h5>
+                <ul>
+                    <li><a href="https://www.grab.com/vn/about/">Về HCMUEAT</a></li>
+                    <li><a href="https://www.grab.com/vn/food/">HCMUEAT Express </a></li>
+                    <li><a href="https://www.grab.com/vn/food-blog/">Blog</a></li>
+                    <li><a href="https://help.grab.com/passenger/en-vn/115002258448-GrabFood">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h5>Hỗ trợ</h5>
+                <ul>
+                    <li><a href="https://help.grab.com/passenger/en-vn/115002258448-GrabFood">Hỗ trợ khách hàng</a></li>
+                    <li><a href="https://help.grab.com/passenger/en-vn/115002258448-GrabFood">FAQs</a></li>
+                    <li><a href="https://express.grab.com/track/orders">Order Tracking</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h5>Social</h5>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/GrabFoodVietNam"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=40C057" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/grabfoodvietnam"><img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=40C057" alt="Instagram"></a></li>
+                    <li><a href="https://x.com/GrabVN"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=40C057" alt="Twitter"></a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h5>Pháp Lý</h5>
+                <ul>
+                    <li><a href="https://www.grab.com/vn/terms-policies/privacy-notice/">Chính sách bảo mật</a></li>
+                    <li><a href="https://www.grab.com/vn/billing-terms/">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-map">
+                <h5>Trụ sở chính</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.062895628504!2d106.69959812408688!3d10.729632460057093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31753203774ca659%3A0xfe19ba1b6b8e824c!2sMapletree%20Business%20Centre!5e0!3m2!1sen!2s!4v1731949258415!5m2!1sen!2s"
+                 width="50" height="50" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 HCMUEAT. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/dashboard.js"></script>  
+</body>
+</html>
