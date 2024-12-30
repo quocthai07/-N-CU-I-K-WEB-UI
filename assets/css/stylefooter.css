@@ -1,0 +1,153 @@
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+body {
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1 {
+ 
+    font-size: 28px;
+    color: #00502d;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 22px;
+    color: #00502d;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+ul {
+    margin: 10px 0 10px 20px;
+}
+ul li {
+    margin-bottom: 10px;
+}
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+.breadcrumb a {
+    color: #00502d;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding-top: 10px;
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+}
+
+.footer-section h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footer-section ul li a:hover {
+    color: #40C057;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links li {
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    background-color: rgb(0, 177, 79);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-map {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+}
+
+.footer-map h5 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 177, 79);
+    margin-bottom: 10px;
+}
