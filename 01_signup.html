@@ -6,48 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng ký</title>  
     <link rel="stylesheet" href="assets/css/signup.css" />
+    <link rel="icon" href="assets/img/HCMUE 2.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/boottrap/bootstrap.min.css" />
     <script src="assets/js/main.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body class="body">
-    <header class="header">
+    <header class="header" style="padding: 15px;">
         <img src="assets/img/HCMUE 2.png" class="signimg" alt="HCMUEat" />
-        <p>HCMUEat</p>
+        <p>HCMUEAT</p>
     </header>
     <div class="signup-container">
         <h2>Đăng Ký</h2>
         <form onsubmit="signup()" class="signup-form">
             <div class="form-group">
                 <label for="username">Email</label>
-                <input type="email" id="email" placeholder="Nhập email của bạn vào" required/>
+                <input type="email" id="email" placeholder="Nhập Email" required/>
             </div>
             <div class="form-group">
-                <label for="username">Tên Đăng Ký</label>
-                <input type="text" id="username" placeholder="Nhập tên của bạn vào" required/>
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" placeholder="Nhập Tên đăng nhập" required/>
             </div>
             <div class="form-group">
-                <label for="username">Mật Khẩu</label>
-                <input type="password" id="password" placeholder="Nhập mật khẩu của bạn vào" required/>
+                <label for="username">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required/>
             </div>
             <div class="form-group">
-                <label for="username">Kiểm tra lại mật Khẩu</label>
-                <input type="password" id="password" placeholder="Nhập lại mật khẩu bạn vừa nhập vào" required/>
+                <label for="username">Xác thực mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập lại mật khẩu" required/>
             </div>
-            <button type="submit" id="register" onclick="reGister"><a href="01_login.html" class="underline">Đăng ký</a></button>
+            <button type="submit" onclick="reGister()"><a class="underline"><b>Đăng ký</b></a></button>
             <div class="footer">
-                <p>Bằng việc đăng kí, bạn đã đồng ý với HCMUEat về
-                    <a href="">Điều khoản dịch vụ</a>&<a href="">Chính sách bảo mật</a>
+                <p>Bằng việc đăng ký, bạn đã đồng ý với HCMUEAT về
+                    <a href="01_dieukhoan.html">Điều khoản dịch vụ&nbsp;</a>&<a href="01_chinhsach.html">&nbsp;Chính sách bảo mật</a>
                 </p>
-                <p>Bạn đã có tài khoản?<a href="01_login.html">Đăng Nhập ngay</a></p>
-                <footer>
+                <p>Bạn đã có tài khoản?<a href="01_login.html">&nbsp;Đăng Nhập</a> ngay
                     <a href="https://www.google.com/account/about/?hl=en-US" class="auther-link btn btn--size--s btn--with--icon">
-                        <i class="fa-brands fa-google"></i>Liên kết google
+                        <i class="fa-brands fa-google"></i>&nbsp;Liên kết Google
                     </a>
-                </footer>
+                </p>
             </div>
         </form>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <footer class="footer1">
+      <div class="footer1-bottom">
+          <p>&copy; 2024 HCMUEAT. All Rights Reserved.</p>
+      </div>
+  </footer>
 </body>
 
 </html>

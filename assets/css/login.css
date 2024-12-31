@@ -53,7 +53,7 @@
 .login-container button {
   width: 100%;
   padding: 10px;
-  background-color: #6a11cb;
+  background-color: #13aa52;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -64,6 +64,8 @@
 
 .login-container button:hover {
   background-color: #2575fc;
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
 }
 
 .login-container .footer {
@@ -86,6 +88,27 @@
   text-align: center;
   display: none;
 }
+
+.footer1 {
+  background: linear-gradient(120deg, #87ceeb, white);
+  padding-top: 10px;
+  font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+.footer1-bottom {
+    background: linear-gradient(120deg, #87ceeb, white);
+    color: #1a1818;
+    text-align: center;
+    padding: 13px 0;
+    margin: 0;
+    min-height: 35px;
+}
+.footer1-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
 
 @media (max-width: 600px) {
   .login-container {
@@ -124,3 +147,4 @@
       font-size: 18px;
   }
 }
+

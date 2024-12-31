@@ -22,10 +22,13 @@ function validateLogin(event) {
   const validUsernameuser = "userHCMUEAT"; 
   const validPassworduser = "hcmueat";
   if (username === validUsernameadmin && password === validPasswordadmin) {
+    alert("Chúc mừng bạn đã đăng nhập trang quản lý thành công.")
     window.location.href = "02_dashboard admin.html"; 
   } else if (username === validUsernameuser && password === validPassworduser) {
+    alert("Chúc mừng bạn đã đăng nhập thành công! Hãy thưởng thức những món ăn tuyệt ngon bên chúng tôi nhé!")
     window.location.href = "01_Page HCMUEAT.html";
   } else {
+    alert("Tên đăng nhập hoặc mật khẩu bạn nhập không đúng. Hãy kiểm tra lại nhé!")
     document.getElementById("error-message").style.display = "block";
   }
 }
@@ -38,5 +41,6 @@ function reGister(){
   alert("Chúc mừng bạn đã đăng ký thành công. Hãy đăng nhập để thưởng thức những món ăn ngon của chúng tôi nhé!");
   window.location.href = "01_login.html";
 }
+
 
 

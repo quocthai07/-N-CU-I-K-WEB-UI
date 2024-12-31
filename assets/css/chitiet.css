@@ -120,3 +120,25 @@ body {
   font-size: 1rem;
   color: #e63946;
 }
+.profile-photo{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-photo img{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.update{
+  display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.photo{
+  padding: 10px;
+  
+}

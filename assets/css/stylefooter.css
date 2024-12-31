@@ -54,8 +54,9 @@ ul li {
     text-decoration: none;
 }
 .breadcrumb a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
+
 
 .footer {
     background-color: #f8f9fa;

@@ -4,7 +4,7 @@
 .banner {
     width: 100%;
     min-height: 400px; 
-    background-image: url('https://merchant.grab.com/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FEGNlm3guRFS6caN3b4aI&w=1920&q=75');
+    background-image: url('https://tools.corenexis.com/image/cnxm/Q24/12/24a1dfb07a.webp');
     background-position: center;
     background-size: cover; 
     margin-bottom: 30px;
@@ -89,6 +89,7 @@ body {
 .button-37:hover {
     box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
     transform: translateY(-2px);
+    background-color: #2575fc;
 }
  @media (min-width: 768px) {
 .button-37 {
@@ -214,4 +215,13 @@ body {
 .custom-selects{
     padding: 8px 16px;
     width: 70%;
+}
+
+.table-products a {
+    text-decoration: none;
+    color: #45a049;
+}
+
+.table-products a:hover {
+    color: #45a049;
 }
